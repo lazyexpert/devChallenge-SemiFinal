@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 1em;
+}
+.u {
+  text-decoration: underline;
+}
+.startRec,
+.stopRec {
+  height: 256px;
+  width: 256px;
+  margin: auto;
+}
+.error {
+  padding: 30px;
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+.startRec {
+  background: url("../img/record.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.stopRec {
+  background: url("../img/stop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#page {
+  width: 90%;
+  margin: auto;
+}
+#page #slogan {
+  text-align: center;
+}
+#page #content {
+  display: inline-block;
+  margin: auto;
+  text-align: left;
+}
+#page h1 {
+  font-size: 1.6em;
+  padding: 30px 0;
+}
+#page h2 {
+  font-size: 1.4em;
+}
+#page hr {
+  width: 30%;
+  margin: 30px auto;
+}
+#page th {
+  background: #c6c6c9;
+}
+#page th,
+#page td {
+  border: 1px solid black;
+  padding: 3px;
+}
+#page table {
+  margin: auto;
+}
+#page .buttons {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 24px;
+}
+#page .buttons a {
+  background-color: #8b8e8d;
+  border-radius: 5px;
+  border: 2px solid #676965;
+  box-shadow: 2px 2px 2px black;
+  padding: 10px;
+  margin: 20px;
+  color: black;
+  text-decoration: none;
+}
+#order {
+  margin: 30px;
+}

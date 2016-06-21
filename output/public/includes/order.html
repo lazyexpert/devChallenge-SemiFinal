@@ -1,0 +1,58 @@
+
+<a href="#" ng-click="orderCtrl.startRec()"  ng-show="orderCtrl.showStartRec()">
+  <div class="startRec"></div>
+</a>
+<a href="#" ng-click="orderCtrl.stopRec()" ng-show="orderCtrl.rec">
+  <div class="stopRec"></div>
+</a>
+
+<div class="error" ng-show="orderCtrl.error.length" >
+  <span>{{ orderCtrl.error }}</span>
+  <br /><a href="#" ng-click="orderCtrl.init()" style="color:black">Попробовать еще раз</a>
+</div>
+
+
+<div id="order" ng-init="orderCtrl.init()" ng-show="orderCtrl.order">
+  <table>
+    <tr>
+      <th colspan="2">Детали заказа</th>
+    </tr>
+    <tr>
+      <th>Тип заказа: </th>
+      <td>{{orderCtrl.order.type}}</td>
+    </tr>
+    <tr>
+      <th>Где заказываем: </th>
+      <td>{{orderCtrl.order.place}}</td>
+    </tr>
+    <tr>
+      <th>На имя: </th>
+      <td>{{orderCtrl.order.name}}</td>
+    </tr>
+    <tr>
+      <th>Контактный телефон: </th>
+      <td>{{orderCtrl.order.phone}}</td>
+    </tr>
+    <tr>
+      <th>Куда доставить: </th>
+      <td>{{orderCtrl.order.adress}}</td>
+    </tr>
+    <tr>
+      <th>Когда доставить: </th>
+      <td>{{orderCtrl.order.date}}</td>
+    </tr>
+    <tr>
+      <th colspan="2">Заказ</th>
+    </tr>
+    <tr ng-repeat="item in orderCtrl.order.order">
+      <td colspan="2">{{item.type}} {{item.title}} {{item.size !== "default" ? item.size : ""}} ({{item.count}})</td>
+    </tr>
+  </table>
+
+  <div class="buttons">
+    <a href="#" ng-click="orderCtrl.send()">Отправить</a>
+    <a href="#" ng-click="orderCtrl.init()">Сбросить</a>
+  </div>
+
+
+</div>

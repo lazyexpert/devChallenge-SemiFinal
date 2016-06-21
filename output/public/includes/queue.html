@@ -1,0 +1,49 @@
+<div id="data" ng-show="queue.orders.length" ng-init="queue.init()">
+  <h2> Очередь ваших заказов: </h2>
+  <table ng-repeat="order in queue.orders" style="margin-bottom:30px;">
+    <tr>
+      <th colspan="2">Детали заказа</th>
+    </tr>
+    <tr>
+      <th>ID заказа:</th>
+      <td>{{order.id}}</td>
+    </tr>
+    <tr>
+      <th>Тип заказа: </th>
+      <td>{{order.type}}</td>
+    </tr>
+    <tr>
+      <th>Где заказываем: </th>
+      <td>{{order.place}}</td>
+    </tr>
+    <tr>
+      <th>На имя: </th>
+      <td>{{order.name}}</td>
+    </tr>
+    <tr>
+      <th>Контактный телефон: </th>
+      <td>{{order.phone}}</td>
+    </tr>
+    <tr>
+      <th>Куда доставить: </th>
+      <td>{{order.adress}}</td>
+    </tr>
+    <tr>
+      <th>Когда доставить: </th>
+      <td>{{order.date}}</td>
+    </tr>
+    <tr>
+      <th>Время выполнения программой: </th>
+      <td>{{order.executionTime}}</td>
+    </tr>
+    <tr>
+      <th colspan="2">Заказ</th>
+    </tr>
+    <tr ng-repeat="item in order.order">
+      <td colspan="2">{{item.type}} {{item.title}} {{item.size !== "default" ? item.size : ""}} ({{item.count}})</td>
+    </tr>
+    <tr>
+      <th colspan="2" ng-click="queue.remove(order.id)"><a href="#">Удалить заказ из очереди</a></th>
+    </tr>
+  </table>
+</div>
